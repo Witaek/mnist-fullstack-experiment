@@ -1,0 +1,4 @@
+# Ignore trained model artifacts
+*.pt
+*.pth
+mlruns/
