@@ -4,19 +4,19 @@ class LeNet5(nn.Module):
     def __init__(self, num_classes):
         super().__init__()
         
-        conv1 = nn.Sequential(
+        self.conv1 = nn.Sequential(
             nn.Conv2d(1, 6, 5),
             nn.ReLU(),
             nn.AvgPool2d(2,2)
         )
 
-        conv2 = nn.Sequential(
+        self.conv2 = nn.Sequential(
             nn.Conv2d(6,16,5),
             nn.ReLU(),
             nn.AvgPool2d(2,2)
         )
 
-        conv3 = nn.Sequential(
+        self.conv3 = nn.Sequential(
             nn.Conv2d(16,120,5),
             nn.ReLU()
         )
@@ -27,7 +27,7 @@ class LeNet5(nn.Module):
         )
 
         self.fc2 = nn.Sequential(
-            nn.Linear(120, num_classes),
+            nn.Linear(84, num_classes),
         )
 
     def forward(self, input):
