@@ -1,0 +1,4 @@
+defaults:
+  - training: default
+  - model: default
+  - data: mnist

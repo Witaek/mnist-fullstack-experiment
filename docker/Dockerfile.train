@@ -6,10 +6,9 @@ COPY requirements.txt ./
 RUN pip install -v --no-cache-dir -r requirements.txt
 
 COPY src/ src/
-COPY config.yaml .
+COPY configs .
 
 # Optional: create MLflow directory inside the container
 RUN mkdir /mlruns
-ENV MLFLOW_TRACKING_URI=/mlruns
 
 CMD ["python", "src/dummy_train.py"]

@@ -1,0 +1,22 @@
+training:
+  log: true
+  verbose_step: 200
+  logging_step: 20
+  device: cpu
+  metrics: None
+  num_epochs: 50
+  optimizer:
+    _target_: torch.optim.SGD
+    lr: 0.01
+  loss:
+    _target_: torch.nn.CrossEntropyLoss
+model:
+  _target_: src.models.dummy.DummyModel
+  num_classes: 10
+data:
+  dataset:
+    _target_: src.data.mnist.create_mnist_dataloaders
+    data_path: /home/amedee/data/
+    train_val_split: 0.9
+    batch_size: 64
+    seed: 42

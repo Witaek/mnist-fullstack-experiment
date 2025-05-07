@@ -1,8 +1,9 @@
 import torch
 import pytest
 from src.models import LeNet5
+from src.tests.utils import DummyModel
 
-model_classes = [LeNet5]
+model_classes = [DummyModel, LeNet5]
 
 @pytest.mark.parametrize("ModelClass", model_classes)
 def test_model_output_shape(ModelClass):

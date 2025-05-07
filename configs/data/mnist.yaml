@@ -1,0 +1,6 @@
+dataset:
+  _target_: src.data.mnist.create_mnist_dataloaders
+  data_path: "/home/amedee/data/"
+  train_val_split: 0.9
+  batch_size: 64
+  seed: 42

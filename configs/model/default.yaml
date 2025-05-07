@@ -1,0 +1,2 @@
+_target_: src.models.dummy.DummyModel
+num_classes: 10

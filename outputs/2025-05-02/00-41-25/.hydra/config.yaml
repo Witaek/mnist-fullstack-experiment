@@ -1,0 +1,20 @@
+training:
+  log: true
+  verbose_step: 200
+  logging_step: 20
+  device: cpu
+  metrics: None
+  optimizer:
+    _target_: torch.optim.SGD
+    lr: 0.01
+  loss:
+    _target_: torch.nn.CrossEntropyLoss
+model:
+  _target_: src.models.dummy.DummyModel
+  num_classes: 10
+data:
+  data_dir: null
+  batch_size: 8
+  train_val_split:
+  - 55000
+  - 5000

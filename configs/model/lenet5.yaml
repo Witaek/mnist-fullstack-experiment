@@ -1,0 +1,2 @@
+_target_: src.models.lenet5.LeNet5
+num_classes: 10

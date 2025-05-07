@@ -1,0 +1,16 @@
+
+
+optimizer:
+  _target_: torch.optim.SGD
+  lr: .01
+
+loss:
+  _target_: torch.nn.CrossEntropyLoss
+
+train:
+  log: True
+  verbose_step: 200
+  logging_step: 20
+  device: "cpu"
+  metrics: None
+  num_epochs: 50
